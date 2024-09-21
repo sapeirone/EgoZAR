@@ -37,16 +37,16 @@ The official EK100 UDA annotations and pre-extracted features are provided [here
 
 ```sh
 # Annotations
-!mkdir -p annotations
-!git clone https://github.com/epic-kitchens/epic-kitchens-100-annotations.git
-!mv epic-kitchens-100-annotations/UDA_annotations EgoZAR/annotations
-!rm -r epic-kitchens-100-annotations
+mkdir -p annotations
+git clone https://github.com/epic-kitchens/epic-kitchens-100-annotations.git
+mv epic-kitchens-100-annotations/UDA_annotations EgoZAR/annotations
+rm -r epic-kitchens-100-annotations
 
 # TBN features
-!mkdir -p data
-!wget -O ek100.zip https://www.dropbox.com/scl/fo/us8zy3r2rufqriig0pbii/ABeUdV83UNmJ5US-oCxAPno?rlkey=yzbuczl198z067pnotx1zxvuo&e=1&dl=0
-!unzip ek100.zip -d data/
-!rm ek100.zip
+mkdir -p data
+wget -O ek100.zip https://www.dropbox.com/scl/fo/us8zy3r2rufqriig0pbii/ABeUdV83UNmJ5US-oCxAPno?rlkey=yzbuczl198z067pnotx1zxvuo&e=1&dl=0
+unzip ek100.zip -d data/
+rm ek100.zip
 ```
 
 ### 3. Extract the CLIP features for EgoZAR
