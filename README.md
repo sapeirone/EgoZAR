@@ -27,8 +27,9 @@ Clone this repository and create a Conda environment:
 ```sh
 git clone --recursive https://github.com/sapeirone/EgoZAR
 cd EgoZAR
-conda env create -f environment.yml
+conda create --name egozar
 conda activate egozar
+pip install -r requirements.txt
 ```
 
 ### 2. Download the EK100 Annotations and TBN Features
