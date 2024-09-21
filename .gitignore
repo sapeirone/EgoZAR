@@ -1,0 +1,9 @@
+data
+annotations
+wandb
+.vscode
+__pycache__
+ROADMAP.md
+clip_features
+swag_features
+outputs
