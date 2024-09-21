@@ -1,6 +1,6 @@
 # Egocentric zone-aware action recognition across environments
 
-[Simone Alberto Peirone](https://scholar.google.com/citations?user=K0efPssAAAAJ)\*, [Gabriele Goletto](https://gabrielegoletto.github.io)\*, [Mirco Planamente](https://scholar.google.com/citations?user=GIJ3h4AAAAAJ), [Andrea Bottino](https://scholar.google.com/citations?user=YWhB9iYAAAAJ), [Barbara Caputo](https://scholar.google.com/citations?user=mHbdIAwAAAAJ), [Giuseppe Averta](https://scholar.google.com/citations?user=i4rm0tYAAAAJ)
+[Simone Alberto Peirone](https://scholar.google.com/citations?user=K0efPssAAAAJ)\*, [Gabriele Goletto](https://gabrielegoletto.github.io)\*, [Mirco Planamente](https://scholar.google.com/citations?user=GIJ3h4AAAAAJ), [Andrea Bottino](https://scholar.google.com/citations?user=YWhB9iYAAAAJ), [Barbara Caputo](https://scholar.google.com/citations?user=mHbdIAwAAAAJ&hl=en), [Giuseppe Averta](https://scholar.google.com/citations?user=i4rm0tYAAAAJ)
 
 <a target="_blank" href="https://colab.research.google.com/github/sapeirone/EgoZAR/blob/main/run.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
