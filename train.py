@@ -60,7 +60,6 @@ def validate(model, loader):
         verb_labels = verb_labels.to(device)
         noun_labels = noun_labels.to(device)
         
-        # apply cross attention to modality features and CLIP features
         verb_logits, noun_logits = dict(), dict()
 
         for mod, m in model.items():
@@ -99,10 +98,10 @@ def train(
     disent_loss_weight=0.0,
     disent_all_modalities=False,
 ):
+    # Classification and disentanglement loss meters
     loss_meter = MeanMetric(nan_strategy="error").to(device)
     disent_loss_meter = MeanMetric(nan_strategy="error").to(device)
 
-    # Put all the models in train mode
     for m in model.values():
         m.train()
 
@@ -120,6 +119,7 @@ def train(
         feat_motion, feat_acz = dict(), dict()
         motion_cls, acz_cls = dict(), dict()
         batch_env_labels = env_labels[idxs]
+        
         for mod, m in model.items():
             (
                 verb_logits[mod],
@@ -130,7 +130,7 @@ def train(
                 acz_cls[mod],
             ) = model[mod](features[mod], env_features, batch_env_labels)
 
-        # compute the classification loss, possibly with double cross entropy
+        # Compute the classification loss for all the input modalities separately (double CE)
         classification_loss = 0.0
         if double_ce:
             classification_loss += 0.33 * sum(
@@ -141,10 +141,11 @@ def train(
         verb_logits = torch.stack(list(verb_logits.values())).sum(dim=0)
         noun_logits = torch.stack(list(noun_logits.values())).sum(dim=0)
 
+        # Compute the classification loss for the fused logits
         classification_loss += 0.5 * (F.cross_entropy(verb_logits, verb_labels) + F.cross_entropy(noun_logits, noun_labels))
         loss_meter.update(float(classification_loss))
 
-        # disentanglement loss
+        # Compute the disentanglement loss
         disent_loss = 0.0
         if disent_all_modalities:
             disent_loss = sum(F.cross_entropy(motion_cls[m][batch_env_labels >= 0], batch_env_labels[batch_env_labels >= 0]) for m in model.keys())
@@ -319,7 +320,7 @@ if __name__ == "__main__":
     args.add_argument("--use-egozar-acz-features", default="N", choices=["Y", "N"])
     args.add_argument("--use-acz-features", default="N", choices=["Y", "N"])
 
-    # training options
+    # Training options
     args.add_argument("--double-ce", action="store_true", default=True)
     args.add_argument("--disent-loss-weight", type=float, default=0.0)
     args.add_argument("--disent-n-clusters", type=int, default=7)
