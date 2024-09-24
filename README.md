@@ -2,6 +2,7 @@
 
 [Simone Alberto Peirone](https://scholar.google.com/citations?user=K0efPssAAAAJ)\*, [Gabriele Goletto](https://gabrielegoletto.github.io)\*, [Mirco Planamente](https://scholar.google.com/citations?user=GIJ3h4AAAAAJ), [Andrea Bottino](https://scholar.google.com/citations?user=YWhB9iYAAAAJ), [Barbara Caputo](https://scholar.google.com/citations?user=mHbdIAwAAAAJ&hl=en), [Giuseppe Averta](https://scholar.google.com/citations?user=i4rm0tYAAAAJ)
 
+<a href='https://arxiv.org/abs/2409.14205'><img src='https://img.shields.io/badge/Paper-Arxiv:2409.14205-red'></a>
 <a href='https://gabrielegoletto.github.io/EgoZAR/'><img src='https://img.shields.io/badge/Project-Page-Green'></a><a target="_blank" href="https://colab.research.google.com/github/sapeirone/EgoZAR/blob/main/run.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
@@ -100,7 +101,15 @@ python train.py --modality=RGB --modality=Flow --modality=Audio --ca \
 This study was supported in part by the CINI Consortium through the VIDESEC project and carried out within the FAIR - Future Artificial Intelligence Research and received funding from the European Union Next-GenerationEU (PIANO NAZIONALE DI RIPRESA E RESILIENZA (PNRR) – MISSIONE 4 COMPONENTE 2, INVESTIMENTO 1.3 – D.D. 1555 11/10/2022, PE00000013). This manuscript reflects only the authors’ views and opinions, neither the European Union nor the European Commission can be considered responsible for them. G. Goletto is supported by PON “Ricerca e Innovazione” 2014-2020 – DM 1061/2021 funds.
 
 ## Cite Us
-*preprint coming soon*
+If you use EgoZAR in your research or applications, please cite our paper:
+```bibtex
+@article{peirone2024,
+  author    = {Peirone, Simone Alberto and Goletto, Gabriele and Planamente, Mirco and Bottino, Andrea and Caputo, Barbara and Averta, Giuseppe},
+  title     = {Egocentric zone-aware action recognition across environments},
+  journal   = {arXiv preprint arXiv:2409.14205},
+  year      = {2024},
+}
+```
 
 ## License
 
