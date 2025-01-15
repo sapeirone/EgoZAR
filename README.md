@@ -103,11 +103,12 @@ This study was supported in part by the CINI Consortium through the VIDESEC proj
 ## Cite Us
 If you use EgoZAR in your research or applications, please cite our paper:
 ```bibtex
-@article{peirone2024,
-  author    = {Peirone, Simone Alberto and Goletto, Gabriele and Planamente, Mirco and Bottino, Andrea and Caputo, Barbara and Averta, Giuseppe},
-  title     = {Egocentric zone-aware action recognition across environments},
-  journal   = {arXiv preprint arXiv:2409.14205},
-  year      = {2024},
+@article{peirone2024egocentric,
+  title={Egocentric zone-aware action recognition across environments},
+  author={Peirone, Simone Alberto and Goletto, Gabriele and Planamente, Mirco and Bottino, Andrea and Caputo, Barbara and Averta, Giuseppe},
+  journal={Pattern Recognition Letters},
+  year={2024},
+  publisher={Elsevier}
 }
 ```
 
